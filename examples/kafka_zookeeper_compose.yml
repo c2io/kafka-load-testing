@@ -1,0 +1,14 @@
+version: "2"
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    expose:
+      - "2181"
+  kafka:
+    image: wurstmeister/kafka
+    ports:
+      - "9092:9092"
+    environment:
+      DOCKER_API_VERSION: 1.22
+      KAFKA_ADVERTISED_HOST_NAME: 127.0.0.1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
