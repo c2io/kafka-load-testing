@@ -1,3 +1,6 @@
+# docker compose -f kafka-zookeeper-server.yml up -d
+# docker compose -f kafka-zookeeper-server.yml down
+
 version: "2"
 services:
   zookeeper:
